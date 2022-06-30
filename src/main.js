@@ -1,8 +1,15 @@
-import Vue from 'vue'
-import App from './App.vue'
+/* entry point do webpack do vue, nome: "main" do arquivo obrigatório */
+import Vue from 'vue';
+import App from './App';
 
-Vue.config.productionTip = false
-
+// Vue instance
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+    /* FORMA NORMAL */
+        // vai no arquivo index, na pasta public e injeta lá
+        //el: '#app',
+        // render(createElement) {
+        //     return createElement(App)
+        // }
+    /* FORMA PRO */
+    render: h => h(App)
+}).$mount("#app")
